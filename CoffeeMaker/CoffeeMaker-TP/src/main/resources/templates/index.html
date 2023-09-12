@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>CoffeeMaker</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<style>
+		.button {
+			display: inline-block;
+			padding: 12px 24px;
+			font-size: 20px;
+			font-weight: bold;
+			text-align: center;
+			text-decoration: none;
+			background-color: #2B2D42;
+			color: #fff;
+			border-radius: 4px;
+			box-shadow: 0 2px 5px rgba(0,0,0,.3);
+			margin-right: 20px;
+		}
+
+		.center {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+		}
+	</style>
+        <meta charset="utf-8">
+        <meta ingredientName="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/bootstrap.css" />
+<link rel="stylesheet" href="css/app.css" />
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js"></script>
+<script>
+        /*<![CDATA[*/
+        var app = angular.module('indexPage', []);
+        app.controller('indexCtrl', function($scope, $http) {
+            console.log("Hit!");
+
+			$scope.continueAsGuest = function() {
+				// first check to see if a guest is stored in the session storage
+				var previousGuest = sessionStorage.getItem("guestUsername");
+
+				// if the guest exists, then just redirect to customerMenu.html
+				if (previousGuest != null) {
+					// set the guest username in the session storage
+					sessionStorage.setItem("username", previousGuest);
+					// set the role to GUEST 
+					sessionStorage.setItem("role", "GUEST");
+					
+					var customerMenuLink = "customerMenu.html";
+					window.location.href = customerMenuLink;
+				}
+				// if the guest does not exist, then call the API to make the guest
+				else {
+					// create the guest user which will be done in the back end and return the guest username 
+					$http.get("/api/v1/users/createGuest").then(function(success) {
+						// set the guest username in the session storage
+						sessionStorage.setItem("username", success.data.username);
+						sessionStorage.setItem("guestUsername", success.data.username); // this will mark as previously logged in as a guest
+						sessionStorage.setItem("role", "GUEST");
+						// redirect to the customer menu
+						var customerMenuLink = "customerMenu.html";
+						window.location.href = customerMenuLink;
+					}, function(error) {
+						console.error("Error while creating guest");
+						alert("Error while creating guest");
+					});
+
+				}
+			}
+
+            
+                        
+        });
+        /*]]>*/
+</script>
+
+<body>
+       <div ng-app="indexPage" class="generic-container ng-cloak"
+        ng-controller="indexCtrl as ctrl">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <span class="lead">Welcome To CoffeeMaker</span>
+            </div>      
+            <div class="formcontainer">
+              <div class="row">
+                        <div class="form-group col-md-12">
+			<div class="center">
+		<a href="#" class="button" onclick="createAccount()">Create Account</a><br>
+		<a href="#" class="button" onclick="login()">Login</a><br> 
+		<a href="#" class="button" ng-click="continueAsGuest()">Continue As Guest</a>
+
+	</div>
+	<script>
+		function createAccount() {
+			var createAccountLink = "createUser.html";
+			window.location.href = createAccountLink;
+		}
+
+		function login() {
+			var loginLink = "loginUser.html";
+			window.location.href = loginLink;
+		}
+	</script>
+				
+	     </div>
+    </div>
+         </div>
+    </div>
+           <footer>
+   <p><a href="https://github.ncsu.edu/engr-csc326-spring2023/csc326-TP-203-1/wiki/Privacy-Policy">Privacy Policy</a></p>
+</footer> 
+       </div>
+
+</body>
+</html> 
+
+
+
