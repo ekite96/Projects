@@ -1,0 +1,37 @@
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 10px;
+    justify-items: center; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    width: 95%;
+    position: relative;
+    padding: 5px;
+    border: 1px solid black;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.dish {
+    margin: 0;
+}
+
+.attachment {
+    height: 40px;
+    width: 40px;
+    margin: 5px;
+}
+
+.vendor {
+    margin: 0;
+}
+
+.poster {
+    margin: 0;
+}
