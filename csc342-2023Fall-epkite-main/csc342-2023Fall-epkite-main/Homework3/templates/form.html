@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment App</title>
+    <link rel="stylesheet" type="text/css" href="css/form.css">
+    <script src="js/form.js"></script>
+</head>
+<body>
+    <form id="paymentForm" action="/send" method="post" enctype="multipart/form-data">
+        <div id="senderDetails">
+            <h2>Sender Details</h2>
+            <img id="previewImage" src="" alt="Preview Image" style="max-width: 100%; max-height: 200px; display: none;">
+            <input type="file" name="image" id="imageInput" accept="image/*" required>
+            <input type="text" name="firstName" placeholder="First Name" required>
+            <input type="text" name="lastName" placeholder="Last Name" required>
+        </div>
+
+        <div id="recipientDetails">
+            <h2>Recipient Details</h2>
+            <input type="text" name="recipientFirstName" placeholder="Recipient's First Name" required>
+            <input type="text" name="recipientLastName" placeholder="Recipient's Last Name" required>
+            <textarea name="message" placeholder="Message" rows="4" required></textarea>
+            <label for="notifyMethod">Notify recipient:</label>
+            <select name="notifyMethod" id="notifyMethod">
+                <option value="None">Choose One</option>
+                <option value="Email">Email</option>
+                <option value="SMS">SMS</option>
+            </select>
+            <input type="text" name="email" placeholder="Recipient's Email">
+            <input type="text" name="phone" placeholder="Recipient's Phone">
+        </div>
+
+        <div id="paymentDetails">
+            <h2>Payment Details</h2>
+            <input type="text" class="cardNumber" name="cardNumber" placeholder="Card Number (XXXX-XXXX-XXXX-XXXX)" required pattern="\d{4}-\d{4}-\d{4}-\d{4}">
+            <input type="text" name="cardExpiration" placeholder="Card Expir (MM/YY)" required>
+            <input type="text" name="ccv" placeholder="CCV (XXX)" required pattern="\d{3,4}">
+            <input type="text" name="amount" placeholder="Amount" required pattern="[0-9]+(\.[0-9]+)?" step="0.01">
+            <label for="termsAndConditions">
+                <input type="checkbox" name="termsAndConditions" id="termsAndConditions" required>
+                I accept the terms and conditions.
+            </label>
+        </div>
+        <div id="submit">
+            <input type="submit" value="Send Payment">
+        </div>
+    </form>
+
+</body>
+</html>

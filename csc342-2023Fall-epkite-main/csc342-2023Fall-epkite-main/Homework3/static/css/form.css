@@ -1,0 +1,85 @@
+#senderDetails { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 1px solid black;
+}
+
+#senderDetails input{ 
+    margin: 5px;
+}
+
+#recipientDetails { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+#recipientDetails input{ 
+    margin: 5px;
+}
+
+#recipientDetails textarea{ 
+    min-width: 400px;
+}
+
+#recipientDetails select{ 
+    cursor: pointer;
+}
+#paymentDetails { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-bottom: 5px;
+}
+
+#paymentDetails input{ 
+    margin: 5px;
+}
+
+.cardNumber {
+    width: 350px;
+}
+
+#paymentDetails label{ 
+    margin: 5px;
+}
+
+#submit{
+    text-align: center;
+}
+
+#imageInput::file-selector-button {
+    font-size: medium;
+    min-width: 150px;
+    min-height: 20px;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+#imageInput::file-selector-button:hover {
+    background-color: black;
+    color: white;
+}
+
+#submit input {
+    font-size: larger;
+    min-width: 250px;
+    min-height: 50px;
+    border-radius: 4px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+#submit input:hover {
+    background-color: black;
+    color: white;
+}
+
+
+

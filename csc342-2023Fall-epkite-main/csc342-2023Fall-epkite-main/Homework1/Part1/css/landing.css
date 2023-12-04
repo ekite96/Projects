@@ -1,0 +1,134 @@
+
+
+header {
+    font-family: "Oswald", "PT Sans";
+    width: 100%;
+    background-color: red;
+    position: sticky;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+h1 {
+    max-width: 500px;
+}
+
+header img {
+    width: 200px;
+    max-height: 200px;
+}
+
+header ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.grid { 
+    font-family: "Oswald", "PT Sans";
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr auto;
+}
+
+.grid img{
+    width: 100px;
+}
+
+.sidebar {
+    grid-column: 1;
+    grid-row: 1;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    text-align:center;
+    background-color: rgb(148, 147, 147);
+    top: 203px;
+    bottom: 0px;
+    position: sticky;
+}
+
+.sidebar2 {
+    grid-column: 8;
+    grid-row: 1;
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+    text-align:center;
+    background-color: rgb(148, 147, 147);
+    top: 203px;
+    position: sticky;
+    z-index: -1;
+}
+
+.article1 {
+    grid-column: 2/7;
+    grid-row: 1;
+    text-align: justify;
+    margin-left: 20px;
+    font-family: "Raleway";
+    font-size: large;
+    border-bottom: 2px solid black;
+}
+
+.article2 {
+    grid-column: 2/7;
+    grid-row: 2;
+    margin-top: 20px;
+    margin-left: 30px;
+    font-family: "Raleway";
+    font-size: large;
+}
+
+h2 {
+    font-size: xx-large;
+    text-align: center;
+    font-family: "Oswald";
+}
+
+h3 {
+    font-size: xx-large;
+    text-align: center;
+    font-family: "Oswald";
+}
+
+.left {
+    float: left;
+    min-width: 40%;
+    max-width: 300px;
+    margin-right: 30px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+    min-width: 60%;
+}
+
+.center1 {
+    text-align: center;
+}
+
+.caption {
+    color: rgb(121, 114, 114);
+    max-width: 50%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.myButton {
+	box-shadow:inset 0px 34px 0px -15px black;
+	background-color:black;
+	border:1px solid #241d13;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family: "Oswald";
+	font-size:18px;
+	font-weight:bold;
+	padding:9px 23px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #7a2a1d;
+}

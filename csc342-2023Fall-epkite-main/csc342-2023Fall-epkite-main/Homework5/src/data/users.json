@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "first_name": "Stu",
+        "last_name": "Dent",
+        "username": "student",
+        "avatar": "https://robohash.org/veniamdoloresenim.png?size=64x64&set=set1",
+        "salt": "48c8947f69c054a5caa934674ce8881d02bb18fb59d5a63eeaddff735b0e9",
+        "password": "809e2b3d4d2729e101a7d13146152ad7d77d4913a5bbb13d99920850405aca04eb0e4d8930e51b8075a9e004a4241c52bd9171d2005b6efbfb05b490808dff22"
+        },
+    {
+        "id": 2,
+        "first_name": "Evan",
+        "last_name": "Kite",
+        "username": "epkite",
+        "avatar": "https://robohash.org/veniamdoloresenim.png?size=64x64&set=set1",
+        "salt": "48c8947f69c054a5caa934674ce8881d02bb18fb59d5a63eeaddff735b0e9",
+        "password": "d2fc74acf8259c90b8a909db51ecd6b360df56433acfe4c87280fac8c023b3979bc7274466ca4e64063cc53a46ae8fdd278698fea635774f19ceb7a96ccf038b"
+        },
+    
+    {
+        "id": 3,
+        "first_name": "Gra",
+        "last_name": "Duate",
+        "username": "graduate",
+        "avatar": "https://robohash.org/veniamdoloresenim.png?size=64x64&set=set1",
+        "salt": "48c8947f69c054a5caa934674ce8881d02bb18fb59d5a63eeaddff735b0e9",
+        "password": "2e9155150897cfd432903098774d887375bafa71240cc720998fa046305f9ddb773b4734cb268391c200555c7490a8ab141dee6acd07b8a1c72adeba92f54e89"
+        }
+]

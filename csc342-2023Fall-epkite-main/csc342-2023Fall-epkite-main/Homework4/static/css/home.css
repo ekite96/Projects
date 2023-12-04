@@ -1,0 +1,120 @@
+header {
+    background-color: #86A789;
+    border-bottom: 2px solid black;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    position: sticky;
+    top: 0;
+}
+body{
+    background-color: #D2E3C8;
+}
+header h1 {
+    grid-column: 3;
+    text-align: center;
+    font-size: 50px;
+}
+#user-header {
+    grid-column: 5;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    padding-right: 5px;
+    margin-top: 10px;
+}
+.header-text a {
+    padding-right: 10px;
+    text-decoration: none;
+    font-size: larger;
+    cursor: pointer;
+}
+.header-text img {
+    width: 50px; 
+    height: 50px; 
+    border: 2px solid #ccc; 
+    border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.homepage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+.input-container {
+    border: 2px solid black;
+    background-color: #EBF3E8;
+    border-radius: 20%;
+    max-width: 450px;
+    max-height: fit-content;
+    min-width: 450px;
+    min-height: 175px;
+    padding-top: 10px;
+    margin-bottom: 100px;
+}
+.howl-input {
+    text-align: center;
+    padding-top: 10px;
+}
+#text-input {
+    max-height: 100px;
+    max-width: 400px;
+    min-height: 100px;
+    min-width: 400px;
+    
+}
+.input-container button {
+    margin-left: 80%;
+    min-width: 50px;
+    border-radius: 4px;
+    font-weight: 800;
+    transition-duration: 0.4s;
+    background-color: white;
+    cursor: pointer;
+}
+.input-container button:hover {
+    background-color: black;
+    color: white;
+}
+.post-container {
+    border: 2px solid grey;
+    background-color: #EBF3E8;
+    min-height: fit-content;
+    width: 500px;
+    margin-bottom: 20px;
+}
+.post-header {
+    margin-top: 2px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: grid;
+    grid-template-columns: 30px 20% 50% 10% 10%;
+}
+.post-header img {
+    grid-column: 1;
+    width: 25px; 
+    height: 25px; 
+    border: 2px solid #ccc; 
+    border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 10px;
+}
+.post-header .username {
+    grid-column: 2;
+    display: flex;
+    flex-direction: row;
+    
+}
+.post-header .time {
+    grid-column: 5;
+    margin-top: 10px;
+}
+.post-body {
+    margin: 10px;
+}
