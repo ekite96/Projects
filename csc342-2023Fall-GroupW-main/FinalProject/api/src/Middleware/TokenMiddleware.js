@@ -51,7 +51,7 @@ exports.generateToken = (req, res, user) => {
   //send token in cookie to client
   res.cookie(TOKEN_COOKIE_NAME, token, {
     httpOnly: true,
-    secure: true,
+    //secure: true,
     maxAge: 60 * 60 * 1000 
   });
 };
