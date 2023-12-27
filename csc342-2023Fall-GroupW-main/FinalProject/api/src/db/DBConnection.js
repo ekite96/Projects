@@ -9,8 +9,7 @@ exports.getDatabaseConnection = () => {
       port: process.env.DB_PORT,
       user: process.env.MYSQL_USER,
       password: process.env.MYSQL_PASSWORD,
-      database: process.env.MYSQL_DATABASE,
-      charset: process.env.DB_CHARSET
+      database: process.env.MYSQL_DATABASE
     })
   }
   return connection;
